@@ -1,0 +1,27 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: hseeberger/scala-sbt
+    # steps:
+      # - checkout
+      # - run: |
+      #     emulator -avd circleci-android24 -no-window
+      # - run: circle-android wait-for-boot
+
+  # test:
+    steps:
+      - checkout
+      - run:
+          environment:
+            TERM: dumb
+          name: unit tests
+          command: sbt test
+
+# workflows:
+#   version: 2
+#   build_and_test:
+#     jobs:
+#       - build
+#       - test:
+#           requires: build

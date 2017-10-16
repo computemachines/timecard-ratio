@@ -18,3 +18,6 @@ libraryDependencies ++=
   "com.android.support.test" % "runner" % "0.5" % "androidTest" ::
   "com.android.support.test.espresso" % "espresso-core" % "2.2.2" % "androidTest" ::
   Nil
+
+libraryDependencies += "org.scalactic" %% "scalactic" % "3.0.4"
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.4" % "test"
